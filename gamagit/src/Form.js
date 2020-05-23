@@ -15,13 +15,13 @@ function Form(props) {
 	return (
 		<div className="Form">
 			<h2>{props.formtitle}</h2>
-			<p>Usuário digitado: {usuario}</p>
+			<p>Usuário a ser pesquisado: {usuario}</p>
 			<form>
 				<p>Nome:</p>
 				<input className="input-text" type="text" placeholder="Digite seu nome..." value={usuario} onChange={e => setUsuario(e.target.value)} />
-				<input className="input-text" type="text" placeholder="Digite seu email..." onChange={e => console.log(e.target.value)} />
+				{/*<input className="input-text" type="text" placeholder="Digite seu email..." onChange={e => console.log(e.target.value)} />*/}
 				{/*<input type="submit" name="submitButton" onClick={handleForm} value="Enviar" />*/}
-				<button type="button" name="submitButton" onClick={handleForm}>Enviar</button>
+				<button type="button" name="submitButton" onClick={handleForm}>Pesquisar</button>
 			</form>
 		</div>
 	);
