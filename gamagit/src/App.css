@@ -54,6 +54,10 @@
 	margin: calc(5px + 2vmin) auto;
 }
 
+#tabela {
+	margin: 20px auto;
+}
+
 @keyframes App-logo-spin {
 	from {
 		transform: rotate(0deg);

@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import './App.css';
 
 function Footer(props) {
-	const [usuario, setUsuario] = useState('Markin Dessanti')
+	const [usuario] = useState('Markin Dessanti');
  	return (
 		<>
 			<div className="Footer">
