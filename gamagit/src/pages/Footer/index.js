@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 // import logo from './logo.svg';
-import './App.css';
+import '../../App';
 
 function Footer(props) {
 	const [usuario] = useState('Markin Dessanti');

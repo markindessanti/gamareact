@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../../logo.svg';
+import '../../App.css';
 import ReactDOM from 'react-dom';
-import Form from './Form';
+import Form from '../Form';
 
 ReactDOM.render(
 	<React.StrictMode>
