@@ -3,13 +3,15 @@ import logo from '../../logo.svg';
 import '../../App.css';
 import axios from 'axios';
 import * as S from './styled';
+import { useHistory } from "react-router-dom";
 
 function Home(props) {
 	const [usuario, setUsuario] = useState('');
+	const history = useHistory();
 
-	function handleForm() {
+	async function handleForm() {
 		// console.log(`Usuario ${usuario}`);
-		axios.get(`https://api.github.com/users/${usuario}/repos`).then(response => {
+		await axios.get(`https://api.github.com/users/${usuario}/repos`).then(response => {
 			const repositories = response.data;
 			const repositoriesName = [];
 			repositories.forEach(repository => {
@@ -19,13 +21,15 @@ function Home(props) {
 			localStorage.setItem('repositoriesName', JSON.stringify(repositoriesName));
 		});
 
-		axios.get(`https://api.github.com/users/${usuario}`).then(response => {
+		await axios.get(`https://api.github.com/users/${usuario}`).then(response => {
 			const userName = response.data.name;
 			const userAvatar = response.data.avatar_url;
 			// console.log(userName, userAvatar);
 			localStorage.setItem('userName', JSON.stringify(userName));
 			localStorage.setItem('userAvatar', JSON.stringify(userAvatar));
 		});
+
+		history.push('/repositories');
 	}
 	return (
 		<>
