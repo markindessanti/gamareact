@@ -2,10 +2,6 @@
 	text-align: center;
 }
 
-.Form {
-	text-align: center;
-}
-
 .App-logo {
 	height: 20vmin;
 	pointer-events: none;
@@ -17,7 +13,7 @@
 	}
 }
 
-.App-header, .Form, .Repositories {
+.App-header {
 	background-color: #282c34;
 	min-height: 50vh;
 	display: flex;
@@ -28,7 +24,7 @@
 	color: white;
 }
 
-.Repositories {
+/* .Repositories {
 	background-color: #282c34;
 	min-height: 100vh;
 	display: flex;
@@ -37,7 +33,7 @@
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: white;
-}
+} */
 
 .Footer {
 	background-color: #303133;

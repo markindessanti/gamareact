@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // import logo from './logo.svg';
 import '../../App';
 import axios from 'axios';
+import * as S from './styled';
 
 function Form(props) {
 	const [usuario, setUsuario] = useState('');
@@ -13,17 +14,17 @@ function Form(props) {
 
 	}
 	return (
-		<div className="Form">
+		<S.Form>
 			<h2>{props.formtitle}</h2>
 			<p>Usuário a ser pesquisado: {usuario}</p>
 			<form>
 				<p>Nome:</p>
-				<input className="input-text" type="text" placeholder="Digite seu nome..." value={usuario} onChange={e => setUsuario(e.target.value)} />
+				<S.Input className="input-text" type="text" placeholder="Digite seu nome..." value={usuario} onChange={e => setUsuario(e.target.value)} />
 				{/*<input className="input-text" type="text" placeholder="Digite seu email..." onChange={e => console.log(e.target.value)} />*/}
 				{/*<input type="submit" name="submitButton" onClick={handleForm} value="Enviar" />*/}
-				<button type="button" name="submitButton" onClick={handleForm}>Pesquisar</button>
+				<S.Button type="button" name="submitButton" onClick={handleForm}>Pesquisar</S.Button>
 			</form>
-		</div>
+		</S.Form>
 	);
 }
 
