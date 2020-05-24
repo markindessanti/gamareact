@@ -25,3 +25,9 @@ export const ListItem = styled.ul
 		background: #202030;
 		padding: .5rem;
 	`;
+
+export const Img = styled.img
+	`
+		padding-top: 30px;
+		width: 150px;
+	`;

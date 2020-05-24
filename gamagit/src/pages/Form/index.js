@@ -9,9 +9,23 @@ function Form(props) {
 
 	function handleForm() {
 		// console.log(`Usuario ${usuario}`);
-		axios.get(`https://api.github.com/users/${usuario}/repos`).then(response => console.log(response.data));
-		axios.get(`https://api.github.com/users/${usuario}`).then(response => console.log(response.data));
+		axios.get(`https://api.github.com/users/${usuario}/repos`).then(response => {
+			const repositories = response.data;
+			const repositoriesName = [];
+			repositories.forEach(repository => {
+				repositoriesName.push(repository.name);
+			});
+			// console.log(repositoriesName);
+			localStorage.setItem('repositoriesName', JSON.stringify(repositoriesName));
+		});
 
+		axios.get(`https://api.github.com/users/${usuario}`).then(response => {
+			const userName = response.data.name;
+			const userAvatar = response.data.avatar_url;
+			// console.log(userName, userAvatar);
+			localStorage.setItem('userName', JSON.stringify(userName));
+			localStorage.setItem('userAvatar', JSON.stringify(userAvatar));
+		});
 	}
 	return (
 		<S.Form>
