@@ -1,22 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './styled';
+import { useHistory } from "react-router-dom";
 
 export default function Repositories() {
+	const history = useHistory();
 	const [userName, setUserName] = useState([]);
 	const [userAvatar, setUserAvatar] = useState([]);
 	const [respositories, setRepositories] = useState([]);
 
 	useEffect(() => {
-		const userName = localStorage.getItem('userName').replace(/"/g, '');
-		const userAvatar = localStorage.getItem('userAvatar').replace(/"/, '');
-		const repositoriesName = JSON.parse(localStorage.getItem('repositoriesName'));
+		let repositoriesName = localStorage.getItem('repositoriesName');
+		if (localStorage.getItem('repositoriesName') != null) {
+			const userName = localStorage.getItem('userName').replace(/"/g, '');
+			const userAvatar = localStorage.getItem('userAvatar').replace(/"/, '');
+			repositoriesName = JSON.parse(localStorage.getItem('repositoriesName'));
+			setUserName(userName);
+			setUserAvatar(userAvatar);
+			setRepositories(repositoriesName);
 
-		setUserName(userName);
-		setUserAvatar(userAvatar);
-		setRepositories(repositoriesName);
-
-		localStorage.clear();
-	}, []);
+			localStorage.clear();
+		} else {
+			history.push('/');
+		}
+	}, [history]);
 	return (
 		<S.divRepositories>
 			<S.Img src={userAvatar} alt="Foto do usuário" />
