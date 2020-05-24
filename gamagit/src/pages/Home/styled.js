@@ -3,14 +3,14 @@ import styled from 'styled-components';
 export const Form = styled.div
 	`
 		background-color: #282c34;
-		min-height: 50vh;
+		min-height: 40vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		font-size: calc(10px + 2vmin);
 		color: white;
-		padding-bottom: 20px;
+		padding-bottom: 70px;
 		text-align: center;
 	`;
 
@@ -31,4 +31,17 @@ export const Button = styled.button
 		color: #fff;
 		background: #002040;
 		margin-botton: 50px;
+		padding-botton: 50px;
+	`;
+
+export const ErroMsg = styled.div
+		`	
+		min-height: 10vh;
+		p {
+			font-size: 20px;
+			background: rgba(10, 30, 60, 0.5);
+			color: rgba(255, 30, 0, 0.8);
+			margin: 20px;
+			padding: 10px;
+		}
 	`;
