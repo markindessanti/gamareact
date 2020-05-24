@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 export const divRepositories = styled.div
 	`
@@ -10,6 +11,7 @@ export const divRepositories = styled.div
 		justify-content: center;
 		font-size: calc(10px + 2vmin);
 		color: white;
+		padding-bottom: 20px;
 	`;
 
 export const List = styled.ul
@@ -30,4 +32,20 @@ export const Img = styled.img
 	`
 		padding-top: 30px;
 		width: 150px;
+	`;
+
+export const LinkHome = styled(Link)
+	`
+		font-family: Arial;
+		font-weight: 400;
+		font-stretch: normal;
+		font-size: 13.3333px;
+		border: 1px solid #103050;
+		padding: 1rem;
+		border-radius: .25rem;
+		color: #fff;
+		background: #002040;
+		margin-botton: 50px;
+		text-decoration: none;
+		vertical-align: center;
 	`;

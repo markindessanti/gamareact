@@ -24,28 +24,6 @@
 	color: white;
 }
 
-/* .Repositories {
-	background-color: #282c34;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
-} */
-
-.Footer {
-	background-color: #303133;
-	min-height: 25vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: rgb(197, 197, 197);
-}
-
 .programador {
 	text-align: center;
 	font-size: calc(5px + 2vmin);
