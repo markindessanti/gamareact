@@ -17,9 +17,6 @@ export default function Repositories() {
 					})
 				}
 			</S.List>
-			{
-				document.getElementById('formulario').innerHTML = ''
-			}
 		</S.divRepositories>
 	)
 }
